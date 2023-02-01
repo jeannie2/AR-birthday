@@ -1,0 +1,125 @@
+<!--
+-designed for mobie ios, use chrome, landscape mode
+-->
+<!DOCTYPE html>
+<html>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <!-- we import arjs version without NFT but with marker + location based support -->
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  <!-- support 3D text -->
+  <script src="https://unpkg.com/aframe-text-geometry-component@^0.5.0/dist/aframe-text-geometry-component.min.js"></script>
+
+  <body style="margin: 0px; overflow: hidden;">
+    <a-scene
+      embedded
+      vr-mode-ui="enabled: false;"
+      arjs="debugUIEnabled: false;"
+    >
+      <a-assets>
+        <img src="WMNH2OF.jpeg" id="chrome2" crossorigin="anonymous" />
+        <a-asset-item
+          id="exoFont"
+          src="fonts/exoBlack.typeface.json"
+        ></a-asset-item>
+
+        <a-asset-item
+          id="optimerBoldFont"
+          src="https://rawgit.com/mrdoob/three.js/dev/examples/fonts/optimer_bold.typeface.json"
+        ></a-asset-item>
+      </a-assets>
+
+      <a-marker type="pattern" url="data/hiro.patt">
+        <!-- gps-entity-place="latitude:22.279909; longitude:114.173729" -->
+        <a-entity
+          id="water"
+          scale="0.1 0.1 0.1"
+          position="0 0 0"
+          text-geometry="font: #exoFont; text-align: center; value: HAPPY BIRTHDAY"
+          material="metalness:0.9; roughness: 0.05; sphericalEnvMap: #chrome2"
+          animation="property: rotation; to: 360 5 5; dur: 8000; easing: linear; loop: true"
+          animation__2="property: scale; from: 0.05 0.05 0.05; to: 1 1 1; dur: 10000; easing: linear"
+        >
+          <a-entity
+            light="color: white; intensity: 10"
+            position="5 10 5"
+            rotation="0 10 0"
+          ></a-entity>
+
+          <a-entity
+            light="color: yellow; intensity: 10"
+            position="0 20 0"
+            rotation="360 5 5"
+          ></a-entity>
+
+          <!---<a-entity
+            light="type: ambient; color: red; rotation: 90 0 0"
+          ></a-entity> -->
+        </a-entity>
+
+        <!-- 
+          rotation="-90 5 5"
+          animation="property: rotation; to: 0 0 360; repeat: indefinite; dur: 100000; easing: linear"
+          animation__3="property: scale; from: 1.5 1.5 1.5; loop: true; dur: 5000; easing: linear"
+          material="color: yellow; src: #pixels; repeat: 0.5 0.5;"-->
+      </a-marker>
+      <a-entity camera></a-entity>
+    </a-scene>
+
+    <script>
+      let barbara;
+      let water = document.getElementById("water");
+
+      function randomRGB() {
+        let r = Math.floor(Math.random() * 256);
+        let g = Math.floor(Math.random() * 256);
+        let b = Math.floor(Math.random() * 256);
+        return "rgb(" + r + "," + g + "," + b + ")";
+      }
+
+      /* water.setAttribute(
+        "animation__color", // "animation__color",  not animation__2
+        "property: material.color; to: " +
+          randomRGB() +
+          "; dur: 2000; easing: linear; loop: true;"
+      ); */
+
+      setInterval(function () {
+        water.setAttribute("material", "color", randomRGB());
+      }, 3000);
+
+      function updateText(barbara) {
+        setInterval(function () {
+          if (barbara) {
+            water.setAttribute("text-geometry", "value: BARBARA!");
+            barbara = false;
+          } else {
+            water.setAttribute("text-geometry", "value: HAPPY BIRTHDAY");
+            barbara = true;
+          }
+          // return barbara; // works without
+          // water.setAttribute("material", "color", randomRGB());
+        }, 11000);
+      }
+
+      function init() {
+        barbara = true;
+        water.setAttribute("material", "color", randomRGB());
+        updateText(barbara);
+      }
+
+      init();
+
+      /* setTimeout(function () {
+        fire.setAttribute("value", "tinker tailor");
+        //barbara = true;
+        //  water.setAttribute("material.color", randomRGB());
+        //  water.setAttribute("text-geometry", "value: BARBARA!");
+      }, 5000); // 100. 200. visibleDelay = visibleDelay + 200; // will leave out return since works without
+      */
+    </script>
+  </body>
+</html>
+
+<!-- References:
+-missed listing
+-->
