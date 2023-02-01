@@ -9,6 +9,6 @@ This project was made using HTML, CSS, JavaScript, A-Frame
 View on mobie ios, use chrome, landscape mode
 
 ## Sources
-https://github.com/stemkoski/AR.js-examples
-https://aframe.io/
+https://github.com/stemkoski/AR.js-examples <br/>
+https://aframe.io/ <br/>
 possibly others
