@@ -1,6 +1,8 @@
 # AR birthday card
 
-Simple project using AR
+* same as codesandbox (in AR folder): "fervent-julien-u4tz63 - AR WORKING -knife (forked) -birthday - fini": https://codesandbox.io/s/fervent-julien-u4tz63-ar-working-knife-forked-birthday-fini-wurprm 
+
+Simple project using AR 
 
 ## Technologies
 This project was made using HTML, CSS, JavaScript, A-Frame
