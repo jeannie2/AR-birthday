@@ -1,6 +1,6 @@
 # AR birthday card
 
-* same as codesandbox (in AR folder): "fervent-julien-u4tz63 - AR WORKING -knife (forked) -birthday - fini": https://codesandbox.io/s/fervent-julien-u4tz63-ar-working-knife-forked-birthday-fini-wurprm 
+* same as codesandbox (in AR folder) "fervent-julien-u4tz63 - AR WORKING -knife (forked) -birthday - fini": https://codesandbox.io/s/fervent-julien-u4tz63-ar-working-knife-forked-birthday-fini-wurprm 
 
 Simple project using AR 
 
