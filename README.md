@@ -8,8 +8,7 @@ Simple project using AR
 This project was made using HTML, CSS, JavaScript, A-Frame
 
 ## How to use
-Open Github Pages link in phone (ios, use chrome, landscape mode). Point phone at hiro marker on desktop to see the AR <br/>
-Hiro marker: https://commons.wikimedia.org/wiki/File:Hiro_marker_ARjs.png
+Open Github Pages link in phone (ios, use chrome, landscape mode). Point phone at hiro marker on desktop to see the AR. Hiro marker: https://commons.wikimedia.org/wiki/File:Hiro_marker_ARjs.png
 
 ## Sources
 https://github.com/stemkoski/AR.js-examples <br/>
