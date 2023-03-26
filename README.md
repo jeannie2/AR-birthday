@@ -8,7 +8,8 @@ Simple project using AR
 This project was made using HTML, CSS, JavaScript, A-Frame
 
 ## How to use
-View on mobile ios, use chrome, landscape mode
+View on mobile ios, use chrome, landscape mode. Point phone at hiro marker on desktop to see the AR <br/>
+Hiro marker: https://commons.wikimedia.org/wiki/File:Hiro_marker_ARjs.png
 
 ## Sources
 https://github.com/stemkoski/AR.js-examples <br/>
